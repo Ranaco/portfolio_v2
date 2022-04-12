@@ -25,6 +25,7 @@ const LinkItem = ({ route, href, children, target = "_" }) => {
         <NextLink href = {href} passHref scroll = {false}>
             <Link
                 height = "60px"
+                fontFamily = "M PLUS Rounded 1c"
                 width = "120px"
                 fontSize = "20px"
                 borderRadius = "5px"
