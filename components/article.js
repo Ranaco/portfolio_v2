@@ -10,7 +10,8 @@ const AnimatedDiv = chakra(motion.div, {
 const Article = ({ children, props }) => {
     return(
         <AnimatedDiv
-            w = "80vw"
+            mt = { 20 }
+            w = "45vw"
         initial = "init"
         animate = "anim"
             variants = {{
@@ -24,7 +25,7 @@ const Article = ({ children, props }) => {
                 }
             }}
             transition = {{
-                duration: 0.5, delay: 0.3
+                duration: 0.8, delay: 0.3
             }}
        >
             {children}

@@ -16,6 +16,7 @@ const Main = ({ children, router }) => {
 
         >
           <Box
+            w = "100%"
             pt = "100px"
               style=
         {{

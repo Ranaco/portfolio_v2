@@ -33,7 +33,9 @@ const LinkItem = ({ route, href, children, target = "_" }) => {
                 bg = {active ? '#BF616A' : undefined}
                 color = {active ? "#202023" : inActiveColor}
             >
-                {children}
+                {
+                    active ? <b>{children}</b> : children
+                }
             </Link>
         </NextLink>
     )
@@ -46,7 +48,7 @@ const NavBar = ({ route }) => {
       as="nav"
       w="100%"
       css={{ backdropFilter: 'blur(10px)' }}
-      zIndex={1}
+      zIndex={3}
         >
             <Container
                 display="flex"
@@ -94,7 +96,7 @@ const NavBar = ({ route }) => {
                 </NextLink>
                 <MenuItem
                   as={Link}
-                  href="https://github.com/craftzdog/craftzdog-homepage"
+                  href="https://github.com/Ranaco/portfolio_v2"
                 >
                   View Source
                 </MenuItem>

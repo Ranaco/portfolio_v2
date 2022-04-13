@@ -1,4 +1,4 @@
-import { Container, Box } from '@chakra-ui/react'
+import { Container, Box, useColorModeValue } from '@chakra-ui/react'
 import instagram from '../public/logos/instagram.png'
 import github from '../public/logos/GitHub-Mark-120px-plus.png'
 import email from '../public/logos/gmail.png'
@@ -21,7 +21,7 @@ const AnimatedIcons = ({ src, alt, height, width, href }) => {
       whileHover={{
         scale: 1.5,
         borderRadius: '10px',
-        backgroundColor: '#EBCB8B'
+        backgroundColor: useColorModeValue('#A3BE8C', '#EBCB8B') 
       }}
     >
         <Link href = {href} passHref scroll = {false}><a target = "_"><Image src={src} alt={alt} height={height} width={width} /></a></Link>

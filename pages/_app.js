@@ -9,22 +9,7 @@ const Website = ({ Component, pageProps, router }) => {
     <ChakraProvider theme={theme}>
         <Font/>
       <Layout router={router}>
-        <motion.div
-           key = {router.route}
-    initial = "init" animate = "anim" variants = {{
-          "init": {
-              opacity: 0.5,
-              x: -200,
-          },
-          "anim": {
-              x: 0,
-              opacity: 1
-          }
-          }}
-            transition = {{duration: 0.4}}
-      >
-        <Component {...pageProps} />
-    </motion.div>
+               <Component {...pageProps} />
       </Layout>
     </ChakraProvider>
   )
