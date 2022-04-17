@@ -6,10 +6,7 @@ import {
     IconButton,
     MenuList,
     MenuButton,
-    Text,
     Stack,
-    Flex,
-    Heading,
     Link,
     useColorModeValue
 } from '@chakra-ui/react'
