@@ -2,9 +2,9 @@ import Head from 'next/head'
 import { Box } from '@chakra-ui/react'
 
 
-const Secondary = ({ children, route, title }) => {
+const Secondary = ({ children, route, title, width = undefined }) => {
     return(
-        <Box>
+        <Box width= {width}>
             {
                 title && (
                     <Head>

@@ -15,8 +15,8 @@ const ToggleThemeButton = () => {
       transition={{ duration: 0.2 }}
     >
       <IconButton
-        height="60px"
-        width="60px"
+        height="50px"
+        width="50px"
         icon={useColorModeValue(
           <MoonIcon height="30px" width="30px" />,
           <SunIcon height="30px" width="30px" />

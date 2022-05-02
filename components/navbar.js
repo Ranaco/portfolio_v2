@@ -74,7 +74,7 @@ const NavBar = ({ route }) => {
                  <Box ml={2} display={{ base: 'inline-block', md: 'none' }}>
             <Menu isLazy id="navbar-menu">
               <MenuButton
-                  style = {{ height: "60px", width: "60px" }}
+                  style = {{ height: "50px", width: "50px" }}
                 as={IconButton}
                 icon={<HamburgerIcon />}
                 variant="outline"
