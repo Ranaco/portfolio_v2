@@ -29,9 +29,8 @@ const Homepage = () => {
 
     return(
         <Container mt = "300px" w = "100vw" css = {{ flexDirection: "column", display: "flex", alignItems: "center", justifyContent: "center" }} >
-            <Box w = "45vw">
+            <Box w = {width < 560 ? "90vw" : "45vw"}>
             <AnimatedBox
-                w = { width < 750 ? "60vw" : undefined }
                 initial = "init"
                 animate = "anim"
                 variants = {{
@@ -53,8 +52,7 @@ const Homepage = () => {
                 textAlign = "center"
                 css = {{ backdropFilter: "blur(10px)", }}
                 bgColor = {useColorModeValue("#ECEFF4", "#434C5E")}>
-                <Text   
-                flexWrap={['wrap']}
+                <Text
                     textAlign = "center"
                     fontSize = "25px"
                 >
@@ -62,6 +60,7 @@ const Homepage = () => {
             </Text>
             </AnimatedBox>
         <AnimatedBox
+
             mt = { 10 }
             initial = "init"
                 animate = "anim"
@@ -80,7 +79,7 @@ const Homepage = () => {
                     delay: 0.3
                 }}
             >
-                <Text textAlign = "center" fontSize = {width > 860 ? "50px" : width/10} >
+                <Text textAlign = "center" fontSize = {width > 860 ? "50px" : width/12}>
                         <b>Rana Satyam Raj</b>
                 </Text>
                 <Text textAlign={"center"} fontSize = "20px">

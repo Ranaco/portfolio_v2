@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion'
 import { chakra, shouldForwardProp } from '@chakra-ui/react'
+import useWindowDimensions from '../lib/deviceViewport.js'
 
 const AnimatedDiv = chakra(motion.div, {
     shouldForwardProp: prop => {
@@ -8,10 +9,13 @@ const AnimatedDiv = chakra(motion.div, {
 })
 
 const Article = ({ children, props }) => {
+
+    const { width, height } = useWindowDimensions()
+
     return(
         <AnimatedDiv
             mt = { 20 }
-            w = "45vw"
+            w = { width < 560 ? "90vw" : "45vw"}
         initial = "init"
         animate = "anim"
             variants = {{

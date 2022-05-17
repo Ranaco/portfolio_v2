@@ -10,12 +10,12 @@ import {
     Link,
     useColorModeValue
 } from '@chakra-ui/react'
+import useWindowDimensions from '../lib/deviceViewport.js'
 import { HamburgerIcon } from '@chakra-ui/icons'
 import NextLink from 'next/link'
 import ToggleThemeButton from './toggleThemeButton'
 
 const LinkItem = ({ route, href, children, target = "_" }) => {
-
     const active = route == href
     const inActiveColor = useColorModeValue('grey', 'whiteAlpha.900')
     return(
@@ -39,6 +39,7 @@ const LinkItem = ({ route, href, children, target = "_" }) => {
 }
 
 const NavBar = ({ route }) => {
+    const { width, height } = useWindowDimensions()
     return(
         <Box
              position="fixed"
@@ -97,7 +98,7 @@ const NavBar = ({ route }) => {
                 >
                   View Source
                 </MenuItem>
-              </MenuList>
+                                </MenuList>
             </Menu>
           </Box>
         </Box>
